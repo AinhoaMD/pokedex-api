@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="esp">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Ainhoa">
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
     <title>Pokédex</title>
 </head>
 <body>
     <header>
         <h1>Pokédex</h1>
+        <input type="text" id="pokemonInput" placeholder="Escribe un pokémon"/>
+        <button id="buscarBtn">Buscar</button>
     </header>
     <div id="container">
         <br>
-        <h2>Gardevoir</h2>
+        <h2 id="name">Gardevoir</h2>
 
         <div id="galery">
-            <img src="assets/front.png" alt="front" width="100px">
-            <img src="assets/back.png" alt="front" width="100px">
-            <img src="assets/front_shiny.png" alt="front" width="100px">
-            <img src="assets/back_shiny.png" alt="front" width="100px">
+            <img id="front" src="assets/front.png" alt="front" width="100px">
+            <img id="back" src="assets/back.png" alt="back" width="100px">
+            <img id="front_shiny" src="assets/front_shiny.png" alt="front_shiny" width="100px">
+            <img id="back_shiny" src="assets/back_shiny.png" alt="back_shiny" width="100px">
         </div>
-        <div id="cry">
-            <audio controls>
-                <source src="assets/cries_pokemon_latest_282.ogg" type="audio/ogg">
+        <div >
+            <audio controls id="audio">
+                <source id="cry" src="assets/cries_pokemon_latest_282.ogg" type="audio/ogg">
             </audio>
         </div>
         <div id="tabla">
@@ -37,12 +40,12 @@
                     <td>Velocidad</td>
                 </tr>
                 <tr>
-                    <td>68</td>
-                    <td>65</td>
-                    <td>65</td>
-                    <td>125</td>
-                    <td>115</td>
-                    <td>80</td>
+                    <td id="ps">68</td>
+                    <td id="ataque">65</td>
+                    <td id="defensa">65</td>
+                    <td id="ataque_especial">125</td>
+                    <td id="defensa_especial">115</td>
+                    <td id="velocidad">80</td>
                 </tr>
             </table>
         </div>
