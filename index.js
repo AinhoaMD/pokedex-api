@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("pokemonInput");
     const boton = document.getElementById("buscarBtn");
 
+    const container = document.getElementById("container");
+    const badName = document.getElementById("badName");
+    const homeScreen = document.getElementById("homeScreen");
+
     // Elementos del HTML que se van a modificar
     const name = document.getElementById("name");
     const front = document.getElementById("front");
@@ -35,15 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         datos.then((pokemon) => {
             if (!pokemon || !pokemon.name) {
-                document.getElementById("badName").style.display = "block";
-                document.getElementById("container").style.display = "none";
-                document.getElementById("homeScreen").style.display = "none";
+                badName.style.display = "block";
+                container.style.display = "none";
+                homeScreen.style.display = "none";
                 return;
             }
 
-            document.getElementById("container").style.display = "block";
-            document.getElementById("homeScreen").style.display = "none";
-            document.getElementById("badName").style.display = "none";
+            container.style.display = "block";
+            homeScreen.style.display = "none";
+            badName.style.display = "none";
 
             const poke = {
                 name: capitalizar(pokemon.name),
