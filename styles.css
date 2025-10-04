@@ -162,3 +162,8 @@ td {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.915);
     background-color: #00000090;
 }
+
+#tipos {
+    display: flex;
+    justify-content: center;
+}

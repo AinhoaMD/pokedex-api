@@ -25,6 +25,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Función para capitalizar
     const capitalizar = (texto) => texto.charAt(0).toUpperCase() + texto.slice(1);
 
+    // Función para mostrar sprites de los tipos
+    function mostrarTipos(pokemon) {
+        const tiposContainer = document.getElementById('tipos');
+        tiposContainer.innerHTML = ''; // Limpiar tipos anteriores
+
+        pokemon.types.forEach(t => {
+            const img = document.createElement('img');
+            img.src = `assets/${t.type.name}.png`; // sprite correspondiente en assets
+            img.alt = t.type.name;
+            img.width = 50;
+            tiposContainer.appendChild(img);
+        });
+    }
+
     // Pillar datos de la API
     function buscarPokemon() {
         const nombre = input.value.trim().toLowerCase();
@@ -78,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ataque_especial.textContent = poke.ataque_especial;
             defensa_especial.textContent = poke.defensa_especial;
             velocidad.textContent = poke.velocidad;
+            mostrarTipos(pokemon);
         });
     }
 
