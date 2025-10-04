@@ -18,7 +18,8 @@ header {
     text-align: center;
     /* background-image: url(assets/banner.png); */
     height: 100px;
-    display: flex;
+    display: flex; 
+    /* Nota: mejorar esto para que quede bonito */
     align-items: center;
     justify-content: center;
     /* background-repeat: no-repeat;
@@ -31,7 +32,7 @@ header {
     justify-content: center;
 }
 
-#cry {
+#audiocry {
     display: flex;
     justify-content: center;
 }
