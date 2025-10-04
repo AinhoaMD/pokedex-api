@@ -10,24 +10,61 @@ html{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    display: grid;
-    /* meter aquí cosas del grid */
 
 }
 
 header {
-    background-color: #c01515;
+    background: linear-gradient(180deg, #c01515 0%, #ff0000 100%);
+    /* background-color: #c01515; */
     color:white;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    /* background-image: url(assets/banner.png); */
-    height: 100px;
+    height: 140px;
     display: flex; 
     align-items: center;
     justify-content: center;
-    /* background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center; */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#pokemonInput {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #b60000;
+    width: 200px;
+    font-size: 1em;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#pokemonInput:focus {
+    box-shadow: 0 0 10px #ffcc00;
+}
+
+#buscarBtn {
+    background-color: #ff9d00;
+    border: 2px solid #a94c00;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#buscarBtn:hover {
+    background-color: #ffd633;
+    transform: scale(1.05);
 }
 
 #galery {
@@ -60,9 +97,20 @@ audio {
 }
 
 #stats {
-    border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#stats tr:first-child {
+    background-color: #c01515;
+    color: white;
+}
+
+#stats td {
+    border: 1px solid #ddd;
+    padding: 2px;
 }
 
 td {
@@ -74,15 +122,43 @@ td {
     justify-content: center;
 }
 
-#mainMsg, #badName {
+/* #mainMsg, #badName {
     text-align: center;
     color: white;
     font-size: 1.3em;
     margin-top: 100px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-}
+} */
 
 #badName {
     display: none;
+}
+
+#homeScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#homeLogo {
+    width: 200px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+#mainMsg {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.915);
+    background-color: #00000090;
 }

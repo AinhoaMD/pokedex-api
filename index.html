@@ -9,13 +9,29 @@
     <title>Pokédex</title>
 </head>
 <body>
+
     <header>
-        <h1>Pokédex</h1>
-        <input type="text" id="pokemonInput" placeholder="Escribe un pokémon"/>
-        <button id="buscarBtn">Buscar</button>
+        <div class="header-content">
+            <h1>Pokédex</h1>
+            <div class="search-bar">
+                <input type="text" id="pokemonInput" placeholder="Escribe un pokémon"/>
+                <button id="buscarBtn">Buscar</button>
+            </div>
+        </div>
     </header>
-    <p id="mainMsg">Escribe el nombre de un Pokémon</p>
+
+    <!-- Main Page -->
+    <div id="homeScreen">
+        <br>
+        <p id="mainMsg">&nbsp;Escribe el nombre de un Pokémon&nbsp;</p>
+        <br>
+        <img src="assets/rotomdex.png" alt="rotomdex" id="homeLogo">
+    </div>
+
+    <!-- Error Page -->
     <p id="badName">Error: No se encuentra ese Pokémon</p>
+
+    <!-- Search Page -->
     <div id="container">
         <br>
         <h2 id="name"></h2>

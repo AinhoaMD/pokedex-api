@@ -37,12 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!pokemon || !pokemon.name) {
                 document.getElementById("badName").style.display = "block";
                 document.getElementById("container").style.display = "none";
-                document.getElementById("mainMsg").style.display = "none";
+                document.getElementById("homeScreen").style.display = "none";
                 return;
             }
 
             document.getElementById("container").style.display = "block";
-            document.getElementById("mainMsg").style.display = "none";
+            document.getElementById("homeScreen").style.display = "none";
             document.getElementById("badName").style.display = "none";
 
             const poke = {
